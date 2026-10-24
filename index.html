@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="logo">Products</h1>
+
+      <div class="input-div">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search" placeholder="Search here..." />
+      </div>
+
+      <div class="btn-parent">
+        <button class="head-btn" id="cartBtn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="label">Cart</span>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="head-btn" id="favBtn" title="Sevimlilar">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="favCount">0</span>
+        </button>
+        <button class="head-btn"><i class="fa-regular fa-user"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="section-title">
+      <h2 id="listTitle">Barcha mahsulotlar</h2>
+      <span id="resultInfo"></span>
+      <button class="head-btn" id="viewBtn" style="margin-left:auto"></button>
+    </div>
+    <section id="products"></section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Savat -->
+  <aside class="cart" id="cart">
+    <div class="cart-head">
+      <h2>Savat</h2>
+      <button class="x-btn" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="total">
+        <span>Jami:</span>
+        <strong id="cartTotal">0 so'm</strong>
+      </div>
+      <button class="order-btn" id="orderBtn">Buyurtma berish</button>
+      <button class="clear-btn" id="clearCart">Savatni tozalash</button>
+    </div>
+  </aside>
+
+  <!-- Mahsulot ma'lumoti -->
+  <div class="modal" id="modal">
+    <div class="modal-close-row">
+      <strong>Mahsulot haqida</strong>
+      <button class="x-btn" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="product.js"></script>
+</body>
+
+</html>
